@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TedHead</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="assets/mdb/css_copy/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="assets/css/myStyles.css" rel="stylesheet">
+</head>
+
+
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-light teal lighten-4 bg-primary">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/Tedhead-title-logo.pxm" alt="title-logo" width="200px" height="50px">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link">Headboards</a>
+                </li> -->
+                <li class="nav-item dropdown btn-group">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Headboards</a>
+                    <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item">Talks to Watch</a>
+                        <a class="dropdown-item">Talks Watched</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline waves-effect waves-light">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<body ng-app="TedHead">
+
+
+    <div ng-include="shared/navbarView.html"></div>
+    <div ng-view>
+
+        
+    <!-- Views Go Here, Hun! -->
+
+
+    </div>
+
+
+
+    <!-- SCRIPTS -->
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="assets/libs/tether/dist/js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="assets/mdb/js_copy/mdb.min.js"></script>
+
+
+    <!-- Scripts for Firebase, jQuery, Angular, Angular-Route, and my appConfig.js -->
+        <script src="assets/libs/firebase/firebase.js"></script>
+        <script src="assets/libs/angular/angular.js"></script>
+        <script src="assets/libs/angular-route/angular-route.js"></script>
+        <script src="appConfig.js"></script>
+
+    <!-- Scripts for aboutView Activites -->
+        <script src="components/1.aboutView/aboutController.js"></script>
+        <script src="components/1.aboutView/aboutFactory.js"></script>
+
+    <!-- Scripts for homeView Activites -->
+        <script src="components/2.homeView/homeController.js"></script>
+        <script src="components/2.homeView/homeFactory.js"></script>
+
+    <!-- Scripts for regView Activities -->
+        <script src="components/3.regView/regController.js"></script>
+        <script src="components/3.regView/regFactory.js"></script>
+
+    <!-- Scripts for searchResView Activites -->
+        <script src="components/4.searchResView/searchResController.js"></script>
+        <script src="components/4.searchResView/searchResFactory.js"></script>   
+
+    <!-- Scripts for toWatchView Activites -->
+        <script src="components/5.toWatchView/toWatchController.js"></script>
+        <script src="components/5.toWatchView/toWatchFactory.js"></script> 
+
+    <!-- Scripts for haveWatchedView Activites -->
+        <script src="components/6.haveWatchedView/haveWatchedController.js"></script>
+        <script src="components/6.haveWatchedView/haveWatchedFactory.js"></script> 
+
+    <!-- Scripts for selectedView Activites -->
+        <script src="components/7.selectedView/selectedController.js"></script>
+        <script src="components/7.selectedView/selectedFactory.js"></script> 
+
+    <!-- Scripts for processView Activites -->
+        <script src="components/8.processView/processController.js"></script>
+        <script src="components/8.processView/processFactory.js"></script>     
+</body>
+
+</html>
