@@ -1,0 +1,29 @@
+
+
+/* Navigation Styles */
+
+/* Home View Styles */
+
+html,
+body,
+header,
+.view {
+    /*height: 100%;*/
+}
+/* Navigation*/
+
+.navbar {
+    background-color:;
+}
+/*Intro*/
+.view {
+    background: 
+    background-color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Search Bar */
+

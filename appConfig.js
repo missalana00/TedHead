@@ -1,5 +1,17 @@
 "use strict";
 
+// Initialize Firebase
+
+// TODO: Replace with your project's customized code snippet (done
+ 
+firebase.initializeApp ({
+    apiKey: "AIzaSyBS2HVT-9E6_tjehelS6Ylcno7Gxg83iMI",
+    authDomain: "tedhead-229a6.firebaseapp.com",
+    databaseURL: "https://tedhead-229a6.firebaseio.com",
+    storageBucket: "tedhead-229a6.appspot.com",
+    messagingSenderId: "457843835699"
+  });
+
 
 // Creates Angular Module
 var myApp = angular.module("TedHead", ["ngRoute"]);
@@ -40,3 +52,7 @@ myApp.config(function($routeProvider){
 			controller: 'processController',	
 		})	
 });
+
+
+
+  
