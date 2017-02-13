@@ -14,6 +14,10 @@ header,
 
 .navbar {
     background-color:;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: .8em;
+    letter-spacing: 0.1em;
+
 }
 /*Intro*/
 .view {
@@ -27,3 +31,8 @@ header,
 
 /* Search Bar */
 
+/* Body */
+
+body.ng-scope {
+	font-family: 'Open Sans Condensed', sans-serif; 
+}

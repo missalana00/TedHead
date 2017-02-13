@@ -16,7 +16,7 @@ firebase.initializeApp ({
 // Creates Angular Module
 var myApp = angular.module("TedHead", ["ngRoute"]);
 
-// Create configuration routes
+// Creates configuration routes
 myApp.config(function($routeProvider){
 	$routeProvider
 		.when('/aboutView', {
@@ -31,7 +31,7 @@ myApp.config(function($routeProvider){
 			templateUrl: 'components/3.regView/regView.html',
 			controller: 'regController',	
 		})
-		.when('/searchResView', {
+		.when('/searchResView:search', {
 			templateUrl: 'components/4.searchResView/searchResView.html',
 			controller: 'searchResController',	
 		})	

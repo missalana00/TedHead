@@ -2,13 +2,43 @@
 
 
 
-<h4>This will be the home view with an a la Google search bar</h4>
 
+<div class="container-fluid">
 
+<br>
+<br>
 
+<div class="md-form">
+
+<!-- ng-model is the 2-way binding between the view (partial) and the controller -->
+
+    <input ng-model="searchInput" type="text" id="form1" class="form-control">
+    
+    <label for="form1" class="">Example label</label>
+
+    
+<button ng-click="sendSearchInput()" type="button" class="btn btn-primary">Search</button>
+
+</div>
 
 
                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--Mask-->
     <!-- <div class="view hm-black-strong">
@@ -33,3 +63,4 @@
 </main> -->
 <!--/Main layout-->
  
+</div>
