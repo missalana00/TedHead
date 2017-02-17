@@ -14,8 +14,11 @@ header,
 
 .navbar {
     background-color:;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: normal;
+    font-weight: 300;
     font-size: .8em;
+    line-height: 1.4em;
     letter-spacing: 0.1em;
 
 }
@@ -34,5 +37,39 @@ header,
 /* Body */
 
 body.ng-scope {
-	font-family: 'Open Sans Condensed', sans-serif; 
+	font-family: 'Montserrat-Regular', sans-serif; 
+}
+
+h6 {
+    font-family: 'Montserrat-ExtraLight', sans-serif;
+    font-size: .8em;
+}
+
+p.card-text.ng-binding {
+    font-family: 'Montserrat-ExtraLight', sans-serif;
+    font-weight: 100;
+    font-size: 12.5px;
+    font-style: italic;
+}
+
+div.card-block {
+    background-color: #F5F5F5;
+}
+
+h1.section-heading {
+    font-family: 'GrandHotel-Regular';
+    font-size: 55px;
+}
+
+h5.card-title.ng-binding {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h3,
+h3.card-title {
+    font-family: 'GrandHotel-Regular';
+}
+
+a.btn-floating.btn-small {
+    background-color: #80cbc4;
 }

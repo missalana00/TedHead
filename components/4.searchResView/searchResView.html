@@ -1,85 +1,105 @@
 
+<!-- Container -->
+<div class = "container-fluid">
+    
+    <!-- Row -->
+    <div class="row-fluid">
 
-<div class="container-fluid">
+        <!--Section -->
+        <section class="section">
 
-		<!-- <div class="md-form">
-		    <input ng-model="searchInput" type="text" id="form1" class="form-control">
-		    <label for="form1" class="">Example label</label>
-		    Provides extra visual weight and identifies the primary action in a set of buttons
-		<button ng-click="sendSearchInput(searchInput)" type="button" class="btn btn-primary">Search</button>
+            <!--Section heading-->
+            <br>
+            <h1 class="section-heading">Headlining Talks</h1>
 
-		</div> -->
-	
-	<div class="row-fluid">
+            <!--Section description-->
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
 
-		<!--Section: Products v.2-->
-		<section class="section">
+                <!--First row-->
+                <div class="row">
 
-		    <!--Section heading-->
-		    <h1 class="section-heading">Our bestsellers</h1>
-		    <!--Section sescription-->
-		    <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
+                    <!-- First column -->
+                    <div class="col-lg-4 col-md-12 mb-r" ng-repeat="eachVideo in tedVideoList"> 
 
-		    <!--First row-->
-		    <div class="row">
+                        <!--Card-->
+                        <div class="card ovf-hidden">
 
-		        <!--First column-->
-		        <div class="col-lg-4 col-md-12 mb-r" ng-repeat="each in tedVideoList"> 
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                                <img ng-src="{{eachVideo.snippet.thumbnails.high.url}}" class="img-fluid" alt="">
+                                <a>
+                            <div class="mask waves-effect waves-light"></div>
+                                </a>
+                        </div>
+                        <!--/.Card image-->
 
-		            <!--Card-->
-		            <div class="card card-cascade wider">
+                        <!--Card content-->
+                        <div class="card-block">
 
-		                <!--Card image-->
-		                <div class="view overlay hm-white-slight">
-		                    <img src="{{each.snippet.thumbnails.high.url}}" class="img-fluid" alt="tedVidThumbnail">
-		                    <a>
-		                        <div class="mask waves-effect waves-light"></div>
-		                    </a>
-		                </div>
-		                <!--/.Card image-->
+                            <!--Social shares button-->
+                            <a class="activator"><i class="fa fa-share-alt"></i></a>
 
-		                <!--Card content-->
-		                <div class="card-block text-center">
-		                    <!--Category & Title-->
-		                    <a href="" class="text-muted"><h5>{{each.snippet.publishedAt}}</h5></a>
-		                    <h4 class="card-title"><strong><a href="">{{each.snippet.title}}</a></strong></h4>
+                            <!-- FILTER ME!! Date of talk -->
+                            <h6 class="talk-date>">{{eachVideo.snippet.publishedAt}}</h6>
+                            <br>
 
-		                    <!--Description-->
-		                    <p class="card-text">{{each.snippet.description}}</p>
+                            <!--Title & Speaker-->
+                            <h5 class="card-title">{{eachVideo.snippet.title}}</h5>
+                            <hr>
 
-		                    <!--Card footer-->
-		                    <div class="card-footer">
-		                   <!--      <span class="left">39$</span> -->
-		                        <span class="right">
+                            <!-- Talk Description-->
+                            <p class="card-text">{{eachVideo.snippet.description}}</p>
+                            <!-- <a class="link-text"><h5>Read more <i class="fa fa-chevron-right"></i></h5></a> -->
 
-								<!-- Note: this will go on pop-up menu over plus icon -->
-		                        <a class="" ng-click="savetoToWatch()" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
-								
-								<!-- Hidden pop-up menu will go below -->
-								
+                        </div>
+                        <!--/.Card content-->
 
+                        <!--Card reveal-->
+                        <div class="card-reveal">
 
-		                        <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-		                        </span>
-		                    </div>
+                            <!--Content-->
+                            <div class="content text-center">
+                                <h3 class="card-title">TedHead<i class="fa fa-close"></i></h3>
+                                <hr>
 
-		                </div>
-		                <!--/.Card content-->
-		            
-		            </div>
-		            <!--/.Card-->
+                                <!--Social Icons-->
+                                <ul class="inline-ul">
+                                    <li><a ng-click="sendToSelectedView(eachVideo.id.videoId)" class="btn-floating btn-small #b2dfdb"><i class="fa fa-eye"></i></a></li>
+                                    <li><a ng-click="passVidIdtoSaveToWatch(eachVideo)" class="btn-floating btn-small #b2dfdb"><i class="fa fa-plus"></i></a></li> 
+                                    <li><a class="btn-floating btn-small #b2dfdb"><i class="fa fa-check"></i></a></li>  
+                                </ul>
 
-		        </div>
-		        <!--/Third column-->
+                                <h3>Share</h3>
+                                <hr>
 
-		    </div>
-		    <!--/First row-->
+                                <!--Social Icons-->
+                                <ul class="inline-ul">
+                                     <li><a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"></i></a></li>
+                                     <li><a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"></i></a></li>
+                                     <li><a class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
+                                </ul>
+        
+                            
+                            <!--/.Content-->
+                            </div>
 
-		</section>
-		<!--/Section: Products v.2-->
+                        <!--/.Card reveal-->
+                        </div>
+                    
+                    <!--/.Card-->
+                    </div>
 
-	</div>
-	<!-- div class: row-fluid -->
+                <!--/First column-->
+                </div>
+            
+            <!--/First row-->
+            </div>
 
-</div>
+        <!--/Section -->
+        </section>
+
+    <!-- div class: row-fluid -->
+    </div>
+   
 <!-- div class: container-fluid -->
+</div> 

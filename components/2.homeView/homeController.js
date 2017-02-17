@@ -3,7 +3,7 @@
 
 
 
-myApp.controller("homeController", function($scope, $location) {
+myApp.controller("homeController", function($scope, $http, $location) {
 "use strict"
 
 	console.log("I am the HomeViewController!");
@@ -25,7 +25,7 @@ myApp.controller("homeController", function($scope, $location) {
 
 		// What we're doing is: throwing the searchInput "over the fence", it goes into the URL, which can be accessed by the other controller
 
-		$location.url('/searchResView:'+ $scope.searchInput);
+		$location.url('/searchResView/'+ $scope.searchInput);
 	};
 
 

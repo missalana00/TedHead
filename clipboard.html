@@ -1,0 +1,99 @@
+<!-- Container -->
+<div class = "container-fluid">
+    
+
+<!--Info message-->
+<a class="btn btn-info" onclick="toastr.info('Hi! I am info message.');">Info message</a>
+
+    <!-- Row -->
+    <div class="row-fluid">
+
+        <!--Section -->
+        <section class="section">
+
+            <!--Section heading-->
+            <h1 class="section-heading">Our bestsellers</h1>
+
+            <!--Section description-->
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
+
+
+                <!--First row-->
+                <div class="row">
+
+                    <!-- First column -->
+                    <div class="col-lg-4 col-md-12 mb-r" ng-repeat="each in tedVideoList"> 
+
+                        <!--Rotating card-->
+                        <div class="card-wrapper">
+                        <div id="{{each.id.videoId}}" class="card-rotating effect__click">
+
+                        <!--Front Side-->
+                        <div class="face front">
+
+                                <!-- Image-->
+                                <div class="card-up">
+                                    <img ng-src="{{each.snippet.thumbnails.high.url}}" class="img-fluid" height="360" weight="480" alt="tedVidThumbnail">
+                                </div>
+
+                                <!--Avatar-->
+                                    <!--  <div class="avatar"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%289%29.jpg" class="rounded-circle img-responsive">
+                                </div> -->
+
+                                <!--Content-->
+                                <div class="card-block text-center">
+                                    <a href="" class="text-muted"><h5>{{each.snippet.publishedAt}}</h5></a>
+                                    <h4 class="card-title"><strong><a href="">{{each.snippet.title}}</a></strong></h4>
+
+                                    <!--Triggering button-->
+                                    <a class="rotate-btn" data-card="{{each.id.videoId}}"><i class="fa fa-repeat"></i> Click here to rotate</a>
+                                </div>
+
+
+                        <!--/Front Side-->
+                        </div>
+
+                        <!--Back Side-->
+                        <div class="face back">
+
+                                <!--Content-->
+                                <h4>About this Video</h4>
+                                <hr>
+                                <!--Description-->
+                                <p class="card-text">{{each.snippet.description}}</p>
+                                <p><hr>
+
+                                <!--Social Icons-->
+                                <ul class="inline-ul">
+                                    <li><a class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="icons-sm tw-ic"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="icons-sm gplus-ic"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a class="icons-sm li-ic"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+
+                                <!--Triggering button-->
+                                <a class="rotate-btn" data-card="{{each.id.videoId}}"><i class="fa fa-undo"></i> Click here to rotate back</a>
+
+                        <!--/Back Side-->
+                        </div>
+
+                        <!-- Rotating card2 -->
+                        </div>
+                        
+                    <!--/Rotating card1-->
+                    </div>
+
+               <!--/First column-->
+                </div>
+            
+            <!--/First row-->
+            </div>
+
+        <!--/Section -->
+        </section>
+
+    <!-- div class: row-fluid -->
+    </div>
+   
+<!-- div class: container-fluid -->
+</div> -->

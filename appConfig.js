@@ -31,7 +31,7 @@ myApp.config(function($routeProvider){
 			templateUrl: 'components/3.regView/regView.html',
 			controller: 'regController',	
 		})
-		.when('/searchResView:search', {
+		.when('/searchResView/:search', {
 			templateUrl: 'components/4.searchResView/searchResView.html',
 			controller: 'searchResController',	
 		})	
@@ -43,7 +43,7 @@ myApp.config(function($routeProvider){
 			templateUrl: 'components/6.haveWatchedView/haveWatchedView.html',
 			controller: 'haveWatchedController',	
 		})	
-		.when('/selectedView', {
+		.when('/selectedView/:videoId', {
 			templateUrl: 'components/7.selectedView/selectedView.html',
 			controller: 'selectedController',	
 		})	
