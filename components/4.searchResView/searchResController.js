@@ -24,7 +24,7 @@ myApp.controller("searchResController", function($scope, $routeParams, $http, $l
 	  method: 'GET',
 	  
 	  // Modify this url with the search string of catchTedInput 
-	  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCAuUUnT6oDeKwE6v1NGQxug&q=' + catchTedInput + '&key=AIzaSyDap7sGxUt14nvHxRuIekh-B5a0Y4h3A6M' 
+	  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&channelId=UCAuUUnT6oDeKwE6v1NGQxug&q=' + catchTedInput + '&key=AIzaSyDap7sGxUt14nvHxRuIekh-B5a0Y4h3A6M' 
 	})
 	.then(
 		function successCallback(response) {
@@ -48,7 +48,7 @@ myApp.controller("searchResController", function($scope, $routeParams, $http, $l
 
 		 var vidInfoToSaveToFB = {
  			videoId: footballEachVideo.id.videoId,
-			hasBeenWatched: false,
+			hasBeenWatched: 'false',
 			videoImg: footballEachVideo.snippet.thumbnails.high.url,
 			videoPubDate: footballEachVideo.snippet.publishedAt,
 			videoTitle: footballEachVideo.snippet.title,
@@ -79,6 +79,25 @@ myApp.controller("searchResController", function($scope, $routeParams, $http, $l
 		$location.url('/selectedView/'+ footballId);
 	};
 
+
+	$scope.passVidIdToEdit = function (footballId) {
+		
+
+
+		 var vidInfoToEditInFB = {
+ 			fB_id: footballId.fB_id,
+			videoId: footballId.videoId,
+			hasBeenWatched: 'true',
+			videoImg: footballId.videoImg,
+			videoPubDate: footballId.videoPubDate,
+			videoTitle: footballId.videoTitle,
+			videoDescription: footballId.videoDescription
+		 };
+
+
+		toWatchFactory.editItemSendToHaveWatched(vidInfoToEditInFB);
+
+	}
 
 
 

@@ -19,10 +19,47 @@ myApp.factory("toWatchFactory", function($q, $http){
 			)
 			 .then(function(results){
 			 	console.log(results);
-			 })
+			 });
 		});
 	};
 
 
-	return {postToWatchVideo:postToWatchVideo};
+// Editing an item in Firebase 
+	var editItemSendToHaveWatched = function(videoInfoFootball){
+		console.log("wht is this", videoInfoFootball)
+		return $q((resolve, reject)=>{
+			$http.put(`https://tedhead-229a6.firebaseio.com/allVideos/${videoInfoFootball.fB_id}.json`, 
+				JSON.stringify({
+					fB_id: videoInfoFootball.fB_id,
+					videoId: videoInfoFootball.videoId,
+					hasBeenWatched: 'true',
+					videoImg: videoInfoFootball.videoImg,
+					videoPubDate: videoInfoFootball.videoPubDate,
+					videoTitle: videoInfoFootball.videoTitle,
+					videoDescription: videoInfoFootball.videoDescription
+				})
+			)
+			.then( (editedResponse)=>{
+				console.log(editedResponse);
+			 	resolve(editedResponse);
+			});
+		});
+	};
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	return {postToWatchVideo:postToWatchVideo,
+			editItemSendToHaveWatched:editItemSendToHaveWatched
+			};
 });

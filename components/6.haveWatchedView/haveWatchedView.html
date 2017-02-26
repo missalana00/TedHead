@@ -1,1 +1,104 @@
-<h4>This will be the Talks Watched page</h4>
+<!-- Container -->
+<div class = "container-fluid">
+    
+    <!-- Row -->
+    <div class="row-fluid">
+
+        <!--Section -->
+        <section class="section">
+
+            <!--Section heading-->
+            <br>
+            <h1 class="section-heading">Watched Talks</h1>
+
+            <!--Section description-->
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
+
+                <!--First row-->
+                <div class="row">
+
+                    <!-- First column -->
+                    <div class="col-lg-4 col-md-12 mb-r" ng-repeat="eachVideo in haveWatchedVideoList | filter: { hasBeenWatched: 'true' }">
+
+                        <!--Card-->
+                        <div class="card ovf-hidden">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                                <img ng-src="{{eachVideo.videoImg}}" class="img-fluid" alt="">
+                                <a>
+                            <div class="mask waves-effect waves-light"></div>
+                                </a>
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+
+                            <!--Social shares button-->
+                            <a class="activator"><i class="fa fa-share-alt"></i></a>
+
+                            <!-- FILTER ME!! Date of talk -->
+                            <h6 class="talk-date>">{{eachVideo.videoPubDate}}</h6>
+                            <br>
+
+                            <!--Title & Speaker-->
+                            <h5 class="card-title">{{eachVideo.videoTitle}}</h5>
+                            <hr>
+
+                            <!-- Talk Description-->
+                            <p class="card-text">{{eachVideo.videoDescription}}</p>
+                            <!-- <a class="link-text"><h5>Read more <i class="fa fa-chevron-right"></i></h5></a> -->
+
+                        </div>
+                        <!--/.Card content-->
+
+                        <!--Card reveal-->
+                        <div class="card-reveal">
+
+                            <!--Content-->
+                            <div class="content text-center">
+                                <h3 class="card-title">TedHead<i class="fa fa-close"></i></h3>
+                                <hr>
+
+                                <!--Social Icons-->
+                                <ul class="inline-ul">
+                                    <li><a ng-click="sendToSelectedView(eachVideo.videoId)" class="btn-floating btn-small #b2dfdb"><i class="fa fa-eye"></i></a></li>
+                                    <!-- <li><a ng-click="passVidIdtoSaveToWatch(eachVideo.id.videoId)" class="btn-floating btn-small #b2dfdb"><i class="fa fa-plus"></i></a></li>  -->
+                                    <li><a ng-click="passVidIdToEdit(eachVideo)" class="btn-floating btn-small #b2dfdb"><i class="fa fa-check"></i></a></li>  
+                                </ul>
+
+                                <h3>Share</h3>
+                                <hr>
+
+                                <!--Social Icons-->
+                                <ul class="inline-ul">
+                                     <li><a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"></i></a></li>
+                                     <li><a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"></i></a></li>
+                                     <li><a class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
+                                </ul>
+        
+                            
+                            <!--/.Content-->
+                            </div>
+
+                        <!--/.Card reveal-->
+                        </div>
+                    
+                    <!--/.Card-->
+                    </div>
+
+                <!--/First column-->
+                </div>
+            
+            <!--/First row-->
+            </div>
+
+        <!--/Section -->
+        </section>
+
+    <!-- div class: row-fluid -->
+    </div>
+   
+<!-- div class: container-fluid -->
+</div> 
