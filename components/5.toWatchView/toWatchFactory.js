@@ -26,7 +26,7 @@ myApp.factory("toWatchFactory", function($q, $http){
 
 // Editing an item in Firebase 
 	var editItemSendToHaveWatched = function(videoInfoFootball){
-		console.log("wht is this", videoInfoFootball)
+		console.log("what is this?", videoInfoFootball)
 		return $q((resolve, reject)=>{
 			$http.put(`https://tedhead-229a6.firebaseio.com/allVideos/${videoInfoFootball.fB_id}.json`, 
 				JSON.stringify({
@@ -47,6 +47,13 @@ myApp.factory("toWatchFactory", function($q, $http){
 	};
 
 
+// Deleting an item in Firebase 
+	var deleteItem = function(caughtfB_idFootball){
+		console.log("Do I work?", caughtfB_idFootball)
+		return $q((resolve, reject)=>{
+			$http.delete(`https://tedhead-229a6.firebaseio.com/allVideos/${caughtfB_idFootball}.json`)
+		});
+	};
 	
 
 
@@ -60,6 +67,7 @@ myApp.factory("toWatchFactory", function($q, $http){
 
 
 	return {postToWatchVideo:postToWatchVideo,
-			editItemSendToHaveWatched:editItemSendToHaveWatched
+			editItemSendToHaveWatched:editItemSendToHaveWatched,
+			deleteItem:deleteItem
 			};
 });

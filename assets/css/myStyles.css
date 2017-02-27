@@ -1,5 +1,6 @@
 
 
+
 /* Navigation Styles */
 
 /* Home View Styles */
@@ -72,4 +73,14 @@ h3.card-title {
 
 a.btn-floating.btn-small {
     background-color: #80cbc4;
+}
+
+
+/* Home View Logo */
+
+#logo {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }

@@ -64,10 +64,35 @@ myApp.controller("toWatchController", function($scope, $http, $location, toWatch
 
 		toWatchFactory.editItemSendToHaveWatched(vidInfoToEditInFB);
 
+		// 
+		console.log($scope.toWatchVideoList);
+		let index = $scope.toWatchVideoList.indexOf(footballEachVideo);
+		$scope.toWatchVideoList.splice(index, 1);
+				
+
 	}
 
 
 
+	$scope.passVidIdToDelete = function(fB_idFootball,obj) {
+
+		console.log(fB_idFootball);
+		console.log("obj",obj)
+		// This is where we are returning a promise (from factory)
+		toWatchFactory.deleteItem(fB_idFootball)
+		// Because we returned a promise, we can do a .then()
+		.then( (editedResponse)=>{
+			console.log(editedResponse);
+		 	resolve(editedResponse);
+		 	// getData();
+		});
+		 			console.log($scope.toWatchVideoList);
+					let index = $scope.toWatchVideoList.indexOf(obj);
+					$scope.toWatchVideoList.splice(index, 1);
+				
+
+
+	};
 
 
 
