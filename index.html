@@ -1,132 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TedHead</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TedHead</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="/assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Material Design Bootstrap -->
-    <link href="/assets/mdb/css_copy/mdb.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="/assets/mdb/css_copy/mdb.min.css" rel="stylesheet">
 
-    <!-- Grand Hotel Font -->
-    <link href="/assets/fonts/grand_hotel/GrandHotel-Regular.ttf" rel="stylesheet">
+        <!-- Grand Hotel Font -->
+        <link href="/assets/fonts/grand_hotel/GrandHotel-Regular.ttf" rel="stylesheet">
 
-    <!-- Montserrat Fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates" rel="stylesheet">
+        <!-- Montserrat Fonts from Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates" rel="stylesheet">
 
-    <!-- Montserrat Fonts -->
-    <link href="/assets/fonts/montserrat/Montserrat-Light.otf" rel="stylesheet">
-    <link href="/assets/fonts/montserrat/Montserrat-ExtraLight.otf" rel="stylesheet">
-    <link href="/assets/fonts/montserrat/Montserrat-Thin.otf" rel="stylesheet">
-    <link href="/assets/fonts/montserrat/Montserrat-Regular.otf" rel="stylesheet">
-    <link href="/assets/fonts/montserrat/Montserrat-SemiBold.otf" rel="stylesheet">
-    <link href="/assets/fonts/montserrat/Montserrat-Bold.otf" rel="stylesheet">
-    <link href="/assets/fonts/montserrat/MontserratAlternates-Regular.otf" rel="stylesheet">
-    
-    <!-- Your custom styles (optional) -->
-    <link href="assets/css/myStyles.css" rel="stylesheet">
+        <!-- Montserrat Fonts -->
+        <link href="/assets/fonts/montserrat/Montserrat-Light.otf" rel="stylesheet">
+        <link href="/assets/fonts/montserrat/Montserrat-ExtraLight.otf" rel="stylesheet">
+        <link href="/assets/fonts/montserrat/Montserrat-Thin.otf" rel="stylesheet">
+        <link href="/assets/fonts/montserrat/Montserrat-Regular.otf" rel="stylesheet">
+        <link href="/assets/fonts/montserrat/Montserrat-SemiBold.otf" rel="stylesheet">
+        <link href="/assets/fonts/montserrat/Montserrat-Bold.otf" rel="stylesheet">
+        <link href="/assets/fonts/montserrat/MontserratAlternates-Regular.otf" rel="stylesheet">
+        
+        <!-- Your custom styles (optional) -->
+        <link href="assets/css/myStyles.css" rel="stylesheet">
 
-</head>
+    </head>
 
 <!--Navigation & Intro-->
 
- <header ng-controller="navbarController">
-    <nav class="navbar navbar-toggleable-md navbar-light teal lighten-4 bg-primary">
-        <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/Tedhead-title-logo-sized.png" class="d-inline-block align-top" alt="MDBootstrap" width="150" height="40">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a href="#!/regView" class="nav-link">REGISTER<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!/aboutView" class="nav-link">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!/homeView" class="nav-link">HOME</a>
-                    </li>
-                    <li class="nav-item btn-group">
-                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TEDHEAD-BOARDS</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <a href="#!/toWatchView"
-                        class="dropdown-item">Talks To Watch</a>
-                            <a href="#!/haveWatchedView" class="dropdown-item">Talks Watched</a>
-                        </div>
-                    </li>
-                </ul>
-
-                <form class="form-inline waves-effect waves-light">
-                    <span>
-                        <input ng-model="searchInput" class="form-control" type="text" placeholder="Search Tedhead">
-                    </span>
-                    <span>
-                        <button ng-click="sendSearchInput()" class="btn-flat waves-effect">Find talks!</button>
-                    </span>
-                </form>
-
-
-
-
-            
-
-
-               <!--  <input ng-model="searchInput" type="text" id="form1" class="form-control"> -->
-
-
-            </form>
-                <!-- <ul class="navbar-nav nav-flex-icons">
-                    <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
-                    </li>
-                </ul> -->
-            </div>
-        </div>
-    </nav>
-
- <!--Mask
-   <!<div class="view hm-white-strong">
-        <div class="full-bg-img flex-center">
+     <header ng-controller="navbarController">
+        <nav class="navbar navbar-toggleable-md navbar-light teal lighten-4 bg-primary">
             <div class="container">
-                <div class="white-text text-center wow fadeInUp">
-                    <h2>This Navbar isn't fixed</h2>
-                    <h5>When you scroll down it will disappear</h5>
-                    <br>
-                    <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/Tedhead-title-logo-sized.png" class="d-inline-block align-top" alt="MDBootstrap" width="150" height="40">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="#!/regView" class="nav-link">REGISTER<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!/aboutView" class="nav-link">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!/homeView" class="nav-link">HOME</a>
+                        </li>
+                        <li class="nav-item btn-group">
+                            <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TEDHEAD-BOARDS</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <a href="#!/toWatchView"
+                            class="dropdown-item">Talks To Watch</a>
+                                <a href="#!/haveWatchedView" class="dropdown-item">Talks Watched</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline waves-effect waves-light">
+                        <span>
+                            <input ng-model="searchInput" class="form-control" type="text" placeholder="Search Tedhead">
+                        </span>
+                        <span>
+                            <!-- <button ng-click="sendSearchInput()" class="btn-flat waves-effect">Find talks!</button> -->
+                            <button ng-click="sendSearchInput()" type="button" class="btn btn-primary waves-effect">Go!</button>
+                        </span>
+                    </form>
+
+
+                    <!-- <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul> -->
+
                 </div>
             </div>
-        </div>
-    </div> -->
-    <!--/.Mask-->
+        </nav>
 
-
-</header> 
+    </header> 
 <!--/.Navigation & Intro-->
 
 
-<body ng-app="TedHead">
+    <body ng-app="TedHead">
 
-
-    <div ng-include="shared/navbarView.html"></div>
-    <div ng-view></div>
+        <div ng-include="shared/navbarView.html"></div>
+        <div ng-view>
     
     
         
@@ -134,18 +110,18 @@
 
 
    
+    </div>  
 
      <!-- SCRIPTS -->
 
-
     <!-- JQuery -->
-    <script type="text/javascript" src="/assets/libs/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="/assets/libs/tether/dist/js/tether.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/tether/dist/js/tether.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="/assets/mdb/js_copy/mdb.min.js"></script>
+        <script type="text/javascript" src="/assets/mdb/js_copy/mdb.min.js"></script>
 
 
     <!-- Scripts for Firebase, jQuery, Angular, Angular-Route, and my appConfig.js -->
@@ -189,10 +165,6 @@
     <!-- Scripts for navbarView Activites -->
         <script src="/shared/navbar.js"></script>
            
-</body>
-
-</html>
-
-
+    </body>
 
 </html>

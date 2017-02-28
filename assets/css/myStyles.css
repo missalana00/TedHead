@@ -7,6 +7,16 @@
     padding-top: 10px;
 }
 
+.waves-effect, a {
+    -webkit-tap-highlight-color: #f0ad4e;
+}
+
+
+
+
+
+
+
 /* Home View Styles */
 
 html,
