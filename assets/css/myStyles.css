@@ -3,6 +3,10 @@
 
 /* Navigation Styles */
 
+.nav-item {
+    padding-top: 10px;
+}
+
 /* Home View Styles */
 
 html,

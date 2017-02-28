@@ -33,6 +33,7 @@ myApp.controller("searchResController", function($scope, $routeParams, $http, $l
 
 	    $scope.tedVideoList = response.data.items;
 
+
 	    console.log($scope.tedVideoList);
 
 	  }, function errorCallback(response) {
@@ -98,8 +99,9 @@ myApp.controller("searchResController", function($scope, $routeParams, $http, $l
 		toWatchFactory.editItemSendToHaveWatched(vidInfoToEditInFB);
 
 	}
+	
 
-
+	
 
 });
 

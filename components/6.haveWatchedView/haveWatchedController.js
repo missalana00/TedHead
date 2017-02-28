@@ -25,10 +25,19 @@ function getData() {
 
 			// console.log(response);
 
-		 	Object.keys(response.data).forEach((key)=>{
+			Object.keys(response.data).forEach((key)=>{
 		 		response.data[key].fB_id = key;
+		 		let x = new Date(response.data[key].videoPubDate)
+		 		response.data[key].displayPubDate = x.toDateString();
 		 		$scope.haveWatchedVideoList.push(response.data[key]);
 		 	});
+
+
+
+		 	// Object.keys(response.data).forEach((key)=>{
+		 	// 	response.data[key].fB_id = key;
+		 	// 	$scope.haveWatchedVideoList.push(response.data[key]);
+		 	// });
 
 		 	console.log("full keys", $scope.haveWatchedVideoList)
 

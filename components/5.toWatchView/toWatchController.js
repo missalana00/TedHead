@@ -24,6 +24,8 @@ myApp.controller("toWatchController", function($scope, $http, $location, toWatch
 
 		 	Object.keys(response.data).forEach((key)=>{
 		 		response.data[key].fB_id = key;
+		 		let x = new Date(response.data[key].videoPubDate)
+		 		response.data[key].displayPubDate = x.toDateString();
 		 		$scope.toWatchVideoList.push(response.data[key]);
 		 	});
 
