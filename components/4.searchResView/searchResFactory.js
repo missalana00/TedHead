@@ -1,11 +1,16 @@
 
 
-// AngularJS makes it easy for devs to create their own services simply by registering the service. Once registered in the associated controller, the Angular compiler can reference it and load it as a dependency for runtime use.
+// AngularJS makes it easy for devs to create their own services simply by registering the service. 
+// Once registered in the associated controller, the Angular compiler can reference it and load it 
+// as a dependency for runtime use.
 
 
-// Angular module already created as var myApp in appConfig.js. Below, we're passing in the name of the Factory, and a function that takes the $http service.
+// Angular module already created as var myApp in appConfig.js. 
+// Below, we're passing in the name of the Factory, and a function that takes the $http service.
 
-// The $http service facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object or via JSON; it is a function that takes a single argument -- a configuration object -- that is used to generate an HTTP request and returns a promise.
+// The $http service facilitates communication with the remote HTTP servers via the 
+// browser's XMLHttpRequest object or via JSON; it is a function that takes a single 
+// argument -- a configuration object -- that is used to generate an HTTP request and returns a promise.
 
 
 
